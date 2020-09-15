@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-To render multiple columns, use the [`numColumns`](flatlist.md#numcolumns) prop. Using this approach instead of a `flexWrap` layout can prevent conflicts with the item height logic.
+要呈现多个列，请使用numColumns支柱。使用这种方法代替flexWrap布局可以防止与项目高度逻辑冲突。
 
 下面是一个较复杂的例子，其中演示了如何利用`PureComponent`来进一步优化性能和减少 bug 产生的可能（以下这段文字需要你深刻理解 shouldComponentUpdate 的机制，以及 Component 和 PureComponent 的不同，所以如果不了解就先跳过吧）。
 
