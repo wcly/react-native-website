@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-To render multiple columns, use the [`numColumns`](flatlist.md#numcolumns) prop. Using this approach instead of a `flexWrap` layout can prevent conflicts with the item height logic.
+要呈现多个列，请使用`numColumns`属性。使用这种方法代替flexWrap布局可以防止与项目高度产生的逻辑冲突。
 
 下面是一个较复杂的例子，其中演示了如何利用`PureComponent`来进一步优化性能和减少 bug 产生的可能（以下这段文字需要你深刻理解 shouldComponentUpdate 的机制，以及 Component 和 PureComponent 的不同，所以如果不了解就先跳过吧）。
 
@@ -183,14 +183,14 @@ renderItem({ item, index, separators });
 
 从`data`中挨个取出数据并渲染到列表中。
 
-Provides additional metadata like `index` if you need it, as well as a more generic `separators.updateProps` function which let you set whatever props you want to change the rendering of either the leading separator or trailing separator in case the more common `highlight` and `unhighlight` (which set the `highlighted: boolean` prop) are insufficient for your use case.
+根据需要提供额外的元数据，如`index`，`separators.updateProps`函数，在你觉得设置分隔器的`highlight` and `unhighlight`（设置`highlighted: boolean` prop）属性不满足你的需求的时候，可以通过`separators.updateProps`函数修改分隔器的props。
 
 | 类型     | 必填 |
 | -------- | ---- |
 | function | 是   |
 
-- `item` (Object): The item from `data` being rendered.
-- `index` (number): The index corresponding to this item in the `data` array.
+- `item` (Object): 正在渲染的`data`中的数据项。
+- `index` (number): 在`data`数组中与当前项对应的索引。
 - `separators` (Object)
   - `highlight` (Function)
   - `unhighlight` (Function)
