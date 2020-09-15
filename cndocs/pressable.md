@@ -2,8 +2,7 @@
 id: pressable
 title: Pressable
 ---
-
-Pressable is a Core Component wrapper that can detect various stages of press interactions on any of it's defined children.
+Pressable是一个核心组件包装器，它可以检测定义在它内部的任何子组件上的点击交互的不同阶段。
 
 ```jsx
 <Pressable onPress={onPressFunction}>
@@ -11,14 +10,14 @@ Pressable is a Core Component wrapper that can detect various stages of press in
 </Pressable>
 ```
 
-## How it works
+## 它是怎么工作的
 
-On an element wrapped by `Pressable`:
+当一个元素被`Pressable`包裹:
 
-1. [`onPressIn`](#onpressin) is called when a press is activated—before `onPress` is called.
-2. [`onPress`](#onpress) is called when a single press gesture is triggered, 130 milliseconds from `onPressIn`.
-3. [`onLongPress`](#onlongpress) is called only if the press gesture is activated beyond 500ms from `onPressIn` or the time set with [`delayLongPress`](#delaylongpress).
-4. [`onPressOut`](#onpressout) is called when the press gesture is deactivated.
+1. [`onPressIn`](#onpressin) 在按下时，触发`onPress`之前调用.
+2. [`onPress`](#onpress) 在单按手势触发时，`onPressIn`触发的130毫秒后调用.
+3. [`onLongPress`](#onlongpress) 只有在按下时，`onPressIn` 触发后超过500毫秒（或设置的[`delayLongPress`](#delaylongpress)属性）才会调用。
+4. [`onPressOut`](#onpressout) 当按下手势停用时被调用.
 
   <img src="https://cdn.jsdelivr.net/gh/reactnativecn/react-native-website@gh-pages/docs/assets/d_pressable_pressing.svg" width="1000" alt="Diagram of the onPress events in sequence.">
 
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
 
 ### `android_disableSound`
 
-If true, doesn't play Android system sound on press.
+如果为真，点击时不播放Android系统声音。
 
 | Type    | Required | Platform |
 | ------- | -------- | -------- |
@@ -110,7 +109,7 @@ If true, doesn't play Android system sound on press.
 
 ### `android_rippleColor`
 
-Enables the Android ripple effect and configures its color.
+启用Android涟漪效果并配置其颜色。
 
 | Type | Required | Platform |
 | --- | --- | --- |
